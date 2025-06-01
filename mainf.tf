@@ -14,7 +14,7 @@ provider "aws" {
   profile = "lb-aws-admin"
 }
 
-module "apache" {
+module "apache-example" {
     source  = "bigonil/apache/aws"
     version = "1.0.0"
     vpc_id          = var.vpc_id
