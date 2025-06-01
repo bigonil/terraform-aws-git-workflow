@@ -26,5 +26,5 @@ module "apache-example" {
 
 output "public_ip" {
   description = "Public IP of the Apache instance"
-  value       = module.apache.public_ip
+  value       = module.apache-example.public_ip
 }
