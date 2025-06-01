@@ -1,5 +1,13 @@
 terraform {
   required_version = ">= 1.0.0"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "LB-GlobexInfraOps"
+
+    workspaces {
+      name = "terraform-aws-git-workflow"
+    }
+  }
 
   required_providers {
     aws = {
