@@ -22,6 +22,13 @@ provider "aws" {
 
 }
 
+resource "aws_s3_bucket" "bucket" {
+  bucket = var.bucket_name
+  force_destroy = true
+
+}
+
+
 module "apache-example" {
   source  = "bigonil/apache-example/aws"
   version = "1.0.0"
